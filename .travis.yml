@@ -16,7 +16,6 @@ after_success:
   - docker build -t jinwilliam/multi-worker ./worker
   # login to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # push these to docker hub
   - docker push jinwilliam/multi-client
   - docker push jinwilliam/multi-nginx
   - docker push jinwilliam/multi-server
